@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <rect width="180" height="180" rx="40" fill="#063b29"/>
+  <path d="M90 22 L130 62 L90 102 L50 62 Z" fill="#b3922f" opacity="0.9"/>
+  <path d="M50 102 L90 142 L130 102 L90 162 Z" fill="#d4b94e" opacity="0.7"/>
+  <text x="90" y="78" text-anchor="middle" fill="#ffffff" font-family="serif" font-size="52" font-weight="bold">C</text>
+</svg>
