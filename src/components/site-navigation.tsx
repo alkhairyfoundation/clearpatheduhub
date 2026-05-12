@@ -20,8 +20,8 @@ const navLinks = [
     href: "/school",
     children: [
       { label: "About the School", href: "/school#about" },
-      { label: "Elementary", href: "/school#elementary" },
-      { label: "College (JSS/SSS)", href: "/school#college" },
+      { label: "Elementary", href: "/school/elementary" },
+      { label: "College (JSS/SSS)", href: "/school/college" },
       { label: "Advanced School", href: "/school#advanced" },
       { label: "Admissions", href: "/school#admissions" },
     ],
@@ -35,9 +35,18 @@ const navLinks = [
       { label: "Radio Program", href: "/hub#radio" },
       { label: "Edu Hub Access", href: "/hub#access" },
       { label: "Products", href: "/hub#products" },
+      { label: "Programs", href: "/hub/programs", children: [
+        { label: "Future Educators Academy", href: "/hub/programs/future-educators" },
+        { label: "Skill-to-Enterprise Program", href: "/hub/programs/skill-to-enterprise" },
+        { label: "Production & Export Starter", href: "/hub/programs/production-export" },
+        { label: "Career Labs", href: "/hub/programs/career-labs" },
+      ]},
     ],
   },
   { label: "About Us", href: "/about" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Cambridge Approach", href: "/cambridge-approach" },
+  { label: "Bootcamp", href: "/bootcamp" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -116,13 +125,50 @@ export default function SiteNavigation() {
                         className="absolute top-full left-0 mt-1 w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden"
                       >
                         {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-cp-green/5 hover:text-cp-green transition-colors"
-                          >
-                            {child.label}
-                          </Link>
+                          child.children ? (
+                            <div key={child.href} className="mb-1">
+                              <Link
+                                href={child.href}
+                                className={`block px-4 py-2.5 text-sm font-medium transition-colors duration-300 ${
+                                  pathname.startsWith(child.href)
+                                    ? "text-cp-gold font-semibold"
+                                    : "text-gray-700 hover:text-cp-gold"
+                                }`}
+                              >
+                                {child.label}
+                                <ChevronDown className="w-3 h-3 ml-2" />
+                              </Link>
+                              <AnimatePresence>
+                                {dropdownOpen === child.label && (
+                                  <motion.div
+                                    initial={{ opacity: 0, y: 8 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 8 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute left-full top-0 mt-0 w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2"
+                                  >
+                                    {child.children.map((grandChild) => (
+                                      <Link
+                                        key={grandChild.href}
+                                        href={grandChild.href}
+                                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-cp-green/5 hover:text-cp-green transition-colors"
+                                      >
+                                        {grandChild.label}
+                                      </Link>
+                                    ))}
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
+                            </div>
+                          ) : (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-cp-green/5 hover:text-cp-green transition-colors"
+                            >
+                              {child.label}
+                            </Link>
+                          )
                         ))}
                       </motion.div>
                     )}
@@ -206,14 +252,36 @@ export default function SiteNavigation() {
                       {link.children && (
                         <div className="ml-4 border-l border-white/10 pl-3 mt-1 mb-2">
                           {link.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              onClick={() => setMobileOpen(false)}
-                              className="block px-3 py-2 text-sm text-white/60 hover:text-cp-gold transition-colors"
-                            >
-                              {child.label}
-                            </Link>
+                            <div key={child.href} className="mb-1">
+                              <Link
+                                href={child.href}
+                                onClick={() => setMobileOpen(false)}
+                                className={`block px-3 py-2 text-sm text-white/60 hover:text-cp-gold transition-colors ${
+                                  pathname === child.href || (child.children && pathname.startsWith(child.href))
+                                    ? "font-semibold bg-white/5"
+                                    : "text-white/60 hover:text-cp-gold"
+                                }`}
+                              >
+                                {child.label}
+                                {child.children && (
+                                  <ChevronDown className="w-3 h-3 ms-2" />
+                                )}
+                              </Link>
+                              {child.children && (
+                                <div className="ml-4 border-l border-white/10 pl-3 mt-1 mb-2">
+                                  {child.children.map((grandChild) => (
+                                    <Link
+                                      key={grandChild.href}
+                                      href={grandChild.href}
+                                      onClick={() => setMobileOpen(false)}
+                                      className="block px-3 py-2 text-sm text-white/60 hover:text-cp-gold transition-colors"
+                                    >
+                                      {grandChild.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
                           ))}
                         </div>
                       )}
@@ -239,4 +307,3 @@ export default function SiteNavigation() {
     </motion.header>
   );
 }
-

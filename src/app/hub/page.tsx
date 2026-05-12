@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Hub",
+  title: "The Hub - ClearPath Edu Hub",
   description:
-    "ClearPath Hub transforms learning beyond the classroom through our LMS platform, training programs, radio, educational products, and membership access.",
+    "ClearPath Hub transforms learning beyond the classroom through our LMS platform, training programs, radio, educational products, and membership access. Explore our Future Educators Academy, Skill-to-Enterprise Program, Production and Export Starter Program, and Career Labs.",
   alternates: { canonical: "/hub" },
   openGraph: {
     title: "The Hub | ClearPath Edu Hub",

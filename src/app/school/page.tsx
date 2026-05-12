@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The School",
+  title: "The School - ClearPath Edu Hub",
   description:
-    "ClearPath School provides structured, faith-centered education from EYFS through Grade 12 with Cambridge & National Curriculum, Islamic values, and leadership development.",
+    "ClearPath School provides structured, faith-centered education from EYFS through Grade 12 with Cambridge & National Curriculum, Islamic values, and leadership development. Explore our Elementary, College and Advanced School programs.",
   alternates: { canonical: "/school" },
   openGraph: {
     title: "The School | ClearPath Edu Hub",

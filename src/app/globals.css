@@ -49,6 +49,8 @@
   --color-cp-gold-light: #d4b94e;
   --color-cp-cream: #f5f0e8;
   --color-cp-cream-dark: #ebe3d5;
+  --color-cp-charcoal: #1a1a1a;
+  --color-cp-white: #ffffff;
 }
 
 :root {
@@ -96,6 +98,30 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Arabic text support */
+  .arabic {
+    font-family: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  /* Premium Islamic-modern design utilities */
+  .premium-spacing {
+    @apply px-6 sm:px-8 lg:px-12;
+  }
+  
+  .clean-layout {
+    @apply space-y-8;
+  }
+  
+  .elevated-section {
+    @apply bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl;
+  }
+  
+  .whatsapp-cta {
+    @apply bg-cp-green hover:bg-cp-green-light text-white font-semibold rounded-full px-6 py-3 flex items-center gap-2 transition-all duration-300 hover:shadow-xl hover:shadow-cp-gold/25;
+  }
 }
 
 @layer utilities {
@@ -134,5 +160,18 @@
       radial-gradient(circle at 80% 50%, rgba(6, 59, 41, 0.04) 0%, transparent 50%),
       radial-gradient(circle at 50% 20%, rgba(179, 146, 47, 0.03) 0%, transparent 40%),
       radial-gradient(circle at 50% 80%, rgba(6, 59, 41, 0.03) 0%, transparent 40%);
+  }
+}
+
+/* Responsive adjustments for premium design */
+@media (min-width: 640px) {
+  .premium-spacing {
+    @apply px-8;
+  }
+}
+
+@media (min-width: 1024px) {
+  .premium-spacing {
+    @apply px-12;
   }
 }
