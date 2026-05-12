@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -21,18 +22,6 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "Elementary School - ClearPath Edu Hub",
-  description:
-    "ClearPath Elementary provides a nurturing Islamic learning environment where young learners build confidence, literacy, numeracy, discipline, and curiosity from the earliest years.",
-  alternates: { canonical: "/school/elementary" },
-  openGraph: {
-    title: "Elementary School | ClearPath Edu Hub",
-    description:
-      "ClearPath Elementary provides a nurturing Islamic learning environment focused on literacy, numeracy, Islamic values, confidence, and early learning habits.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },

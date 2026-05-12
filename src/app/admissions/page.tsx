@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -14,20 +15,11 @@ import {
   Heart,
   Quote,
   Sparkles,
+  ClipboardCheck,
+  Activity,
+  Moon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "Admissions - ClearPath Edu Hub",
-  description:
-    "ClearPath Edu Hub admissions process - Join our educational ecosystem guided by Consciousness, Competence and Character. Applications open for 2026/2027 academic session.",
-  alternates: { canonical: "/admissions" },
-  openGraph: {
-    title: "Admissions | ClearPath Edu Hub",
-    description:
-      "Join ClearPath Edu Hub - Applications now open for 2026/2027 academic session across Elementary, College and Advanced School.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },

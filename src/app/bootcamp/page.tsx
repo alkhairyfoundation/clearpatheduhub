@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -25,18 +26,6 @@ import {
   Calendar,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "After School Advantage Bootcamp - ClearPath Edu Hub",
-  description:
-    "ClearPath Edu Hub's After School Advantage Bootcamp provides 4 weeks of direction, digital skills, confidence, and a head start on your future for secondary school graduates.",
-  alternates: { canonical: "/bootcamp" },
-  openGraph: {
-    title: "Bootcamp | ClearPath Edu Hub",
-    description:
-      "Get direction, digital skills, confidence, and a head start on your future with ClearPath's After School Advantage Bootcamp.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -136,7 +125,7 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Why This Bootcamp?
             </h2>
           </motion.div>
@@ -148,10 +137,10 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
           >
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               The period between finishing secondary school and starting university is one of the most important stages in a young person's life. Many students waste this period because they do not know what to do next.
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               The After School Advantage Bootcamp helps students use this time wisely. Whether they are waiting for JAMB results, university admission, college of education, vocational training, or still deciding their path, this bootcamp gives them clarity, confidence, and a strong digital foundation.
             </p>
           </motion.div>
@@ -168,7 +157,7 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               What Students Will Achieve in 4 Weeks
             </h2>
           </motion.div>
@@ -186,10 +175,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Week 1: Self-Discovery and Career Mapping
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students discover their strengths, interests, and possible career directions. They learn how to choose a path with confidence instead of guessing.
               </p>
             </motion.div>
@@ -200,10 +189,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Week 2: The Digital Toolkit
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students learn the basic digital tools every modern student and professional should know, including professional email, Google Docs, Google Sheets, Google Drive, Canva, online research, and safe internet use.
               </p>
             </motion.div>
@@ -214,10 +203,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Week 3: 21st-Century Communication
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students learn how to speak with confidence, write clearly, present ideas, work in teams, and communicate like future leaders.
               </p>
             </motion.div>
@@ -228,10 +217,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Week 4: Global Learning and Mini Project
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students are introduced to global learning platforms such as Coursera and Alison. They complete a mini project and prepare their first ClearPath portfolio item.
               </p>
             </motion.div>
@@ -249,7 +238,7 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Who Should Attend?
             </h2>
           </motion.div>
@@ -267,10 +256,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Recent secondary school graduates
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -280,10 +269,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Students waiting for university, polytechnic, or college of education admission
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -293,10 +282,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Young people looking for career direction
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -306,10 +295,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Aspiring entrepreneurs and vocational learners
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -319,10 +308,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Parents who want their children to use the waiting period productively
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
           </motion.div>
@@ -339,7 +328,7 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Bootcamp Details
             </h2>
           </motion.div>
@@ -357,10 +346,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Duration
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 4 Weeks Intensive
               </p>
             </motion.div>
@@ -371,10 +360,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Location
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 ClearPath Edu Hub, [Insert Physical Address]
               </p>
             </motion.div>
@@ -385,10 +374,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Start Date
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 [Insert Date]
               </p>
             </motion.div>
@@ -399,10 +388,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Schedule
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 [Insert Days and Time]
               </p>
             </motion.div>
@@ -413,10 +402,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Learning Format
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Physical classes at the hub plus guided online learning activities.
               </p>
             </motion.div>
@@ -434,7 +423,7 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               What Students Get at Graduation
             </h2>
           </motion.div>
@@ -452,10 +441,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-white rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Certificate of Completion from ClearPath Edu Hub
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -465,10 +454,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-white rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 The Advantage Portfolio: A digital folder containing their CV, career plan, digital skills project, and mini project
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -478,10 +467,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-white rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Career Direction: A clearer understanding of what to do after secondary school
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
 
@@ -491,10 +480,10 @@ export default function BootcampPage() {
               variants={fadeUp}
               className="bg-white rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Priority Access: Bootcamp graduates can receive priority admission or discounts for specialized ClearPath programs such as Future Educators Academy, Skill-to-Enterprise Program, and Production and Export Starter Program
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
               </p>
             </motion.div>
           </motion.div>
@@ -511,7 +500,7 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Pricing and Enrollment
             </h2>
           </motion.div>
@@ -523,10 +512,10 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
           >
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Investment: [Insert Price].
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Early Bird Offer: Register before [Insert Date] and receive [Insert Discount or Bonus].
             </p>
           </motion.div>
@@ -572,10 +561,10 @@ export default function BootcampPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Ready to Secure Your Advantage?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Applications are open for our next cohort. Space is limited to ensure quality mentorship and practical support.
             </p>
           </motion.div>

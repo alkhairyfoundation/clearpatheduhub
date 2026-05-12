@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -20,18 +21,6 @@ import {
   Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "Cambridge Approach - ClearPath Edu Hub",
-  description:
-    "Learn about ClearPath Edu Hub's Cambridge learning approach that combines global standards with local relevance to prepare students for success in the 21st century.",
-  alternates: { canonical: "/cambridge-approach" },
-  openGraph: {
-    title: "Cambridge Approach | ClearPath Edu Hub",
-    description:
-      "Discover how ClearPath Edu Hub combines the rigor of the Cambridge approach with Islamic values and Nigerian curriculum to create globally competitive scholars.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },

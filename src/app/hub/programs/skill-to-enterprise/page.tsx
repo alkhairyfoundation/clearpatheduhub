@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -25,18 +26,6 @@ import {
   Banknote,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "Skill-to-Enterprise Program - ClearPath Edu Hub",
-  description:
-    "ClearPath Edu Hub's Skill-to-Enterprise Program helps students learning vocational skills turn their trade into a business by teaching business, digital, and entrepreneurial skills alongside practical training.",
-  alternates: { canonical: "/hub/programs/skill-to-enterprise" },
-  openGraph: {
-    title: "Skill-to-Enterprise Program | ClearPath Edu Hub",
-    description:
-      "Turn your vocational skills into a thriving business with ClearPath's Skill-to-Enterprise Program - learn business management, marketing, and entrepreneurship alongside your trade training.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -196,7 +185,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Apprentices
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students currently learning a trade through apprenticeship programs.
               </p>
             </motion.div>
@@ -210,7 +199,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Vocational learners
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students enrolled in vocational training programs or technical colleges.
               </p>
             </motion.div>
@@ -224,7 +213,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Secondary school leavers
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Recent graduates who want to start working immediately in their chosen trade.
               </p>
             </motion.div>
@@ -238,7 +227,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Young people who want to become self-employed
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Individuals with trade skills who dream of owning their own business.
               </p>
             </motion.div>
@@ -277,7 +266,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Business management
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn the fundamentals of running a successful business including operations, management, and growth strategies.
               </p>
             </motion.div>
@@ -291,7 +280,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Pricing
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop effective pricing strategies that ensure profitability while remaining competitive in your market.
               </p>
             </motion.div>
@@ -305,7 +294,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Bookkeeping
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Master essential financial record-keeping practices to track income, expenses, and profitability.
               </p>
             </motion.div>
@@ -319,7 +308,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Customer service
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn how to provide excellent customer service that builds loyalty and encourages repeat business.
               </p>
             </motion.div>
@@ -333,7 +322,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 WhatsApp Business
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Leverage WhatsApp Business tools to connect with customers, showcase products, and manage orders efficiently.
               </p>
             </motion.div>
@@ -347,7 +336,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Social media marketing
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn to promote your business effectively on social media platforms to reach more customers and grow your brand.
               </p>
             </motion.div>
@@ -361,7 +350,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Product photography
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn techniques for taking professional-quality photos of your products to showcase them online and in marketing materials.
               </p>
             </motion.div>
@@ -375,7 +364,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Canva design
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create professional marketing materials, social media posts, and business documents using Canva design tools.
               </p>
             </motion.div>
@@ -389,7 +378,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Personal branding
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop a strong personal brand that represents your business values and helps you stand out in your industry.
               </p>
             </motion.div>
@@ -428,7 +417,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Business name
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop a unique, memorable business name that reflects your brand and services.
               </p>
             </motion.div>
@@ -442,7 +431,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Flyer
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create professional promotional flyers to advertise your services and attract customers.
               </p>
             </motion.div>
@@ -456,7 +445,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Price list
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop clear, professional price lists that communicate your services and rates effectively.
               </p>
             </motion.div>
@@ -470,7 +459,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Customer record sheet
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create systems for tracking customer information, orders, and preferences to build lasting relationships.
               </p>
             </motion.div>
@@ -484,7 +473,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 WhatsApp catalog or business page
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Set up a professional WhatsApp Business profile or catalog to showcase your products and services.
               </p>
             </motion.div>
@@ -498,7 +487,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Simple business plan
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create a basic business plan outlining your goals, strategies, and financial projections.
               </p>
             </motion.div>
@@ -512,7 +501,7 @@ export default function SkillToEnterprisePage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 ClearPath certificate
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Receive official recognition from ClearPath Edu Hub for completing the Skill-to-Enterprise Program.
               </p>
             </motion.div>
@@ -533,7 +522,7 @@ export default function SkillToEnterprisePage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Ready to Turn Your Skills into a Business?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Join our Skill-to-Enterprise Program and learn how to transform your vocational skills into a thriving business venture.
             </p>
           </motion.div>

@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -20,7 +21,7 @@ import {
   Shield,
   CheckCircle2,
   Palette,
-  Videocode,
+  Video,
   MessageCircle,
   Layout,
   Edit,
@@ -28,18 +29,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "ClearPath Career Labs - ClearPath Edu Hub",
-  description:
-    "ClearPath Career Labs offers short, intensive practical courses in Digital Literacy, Content Creation, Websites & Payments, Job Readiness, Social Media for Business, and Sales & Presentation - each ending with a real project or portfolio item.",
-  alternates: { canonical: "/hub/programs/career-labs" },
-  openGraph: {
-    title: "Career Labs | ClearPath Edu Hub",
-    description:
-      "Gain immediate, employable skills with ClearPath Career Labs - short practical courses designed for real-world success.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -161,7 +150,7 @@ export default function CareerLabsPage() {
             transition={{ duration: 0.5 }}
             className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
           >
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Title: Short Practical Courses for Immediate Skills.
               Career Labs are short, intensive modules designed to give students immediate, employable, and practical skills. Each lab ends with a real project or portfolio item.
             </p>
@@ -200,9 +189,9 @@ export default function CareerLabsPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Digital Literacy Lab
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
-                Master Google Workspace, email, online research, Canva, and basic AI tools.
-              </p>
+<p className="text-muted-foreground text-sm leading-relaxed">
+                 Master Google Workspace, email, online research, Canva, and basic AI tools.
+               </p>
             </motion.div>
 
             {/* Content Creation Lab */}
@@ -214,9 +203,9 @@ export default function CareerLabsPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Content Creation Lab
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
-                Learn video editing, captions, simple storytelling, and content planning for business and social media.
-              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                 Learn video editing, captions, simple storytelling, and content planning for business and social media.
+               </p>
             </motion.div>
 
             {/* Websites and Payments Lab */}
@@ -228,9 +217,9 @@ export default function CareerLabsPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Websites and Payments Lab
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
-                Learn how to create simple landing pages, order forms, product catalogs, and understand basic payment tools.
-              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                 Learn how to create simple landing pages, order forms, product catalogs, and understand basic payment tools.
+               </p>
             </motion.div>
 
             {/* Job Readiness Lab */}
@@ -242,9 +231,9 @@ export default function CareerLabsPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Job Readiness Lab
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
-                Learn CV writing, interview preparation, professional etiquette, communication, and workplace readiness.
-              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                 Learn CV writing, interview preparation, professional etiquette, communication, and workplace readiness.
+               </p>
             </motion.div>
 
             {/* Social Media for Business Lab */}
@@ -256,9 +245,9 @@ export default function CareerLabsPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Social Media for Business Lab
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
-                Learn how to create posts, manage pages, write captions, and promote small businesses online.
-              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                 Learn how to create posts, manage pages, write captions, and promote small businesses online.
+               </p>
             </motion.div>
 
             {/* Sales and Presentation Lab */}
@@ -270,9 +259,9 @@ export default function CareerLabsPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Sales and Presentation Lab
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
-                Learn how to pitch ideas, present products, and communicate value with confidence.
-              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                 Learn how to pitch ideas, present products, and communicate value with confidence.
+               </p>
             </motion.div>
           </motion.div>
         </div>
@@ -305,7 +294,7 @@ export default function CareerLabsPage() {
             <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
               Digital Literacy Lab: Master Google Workspace, email, online research, Canva, and basic AI tools
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Students gain proficiency in essential digital productivity tools that are universally required in modern workplaces and academic settings.
             </p>
           </motion.div>
@@ -322,7 +311,7 @@ export default function CareerLabsPage() {
             <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
               Content Creation Lab: Learn video editing, captions, simple storytelling, and content planning for business and social media
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Develop skills to create engaging visual content that communicates effectively across digital platforms.
             </p>
           </motion.div>
@@ -339,7 +328,7 @@ export default function CareerLabsPage() {
             <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
               Websites and Payments Lab: Learn how to create simple landing pages, order forms, product catalogs, and understand basic payment tools
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Gain practical skills in creating basic online business presence and processing simple transactions.
             </p>
           </motion.div>
@@ -356,7 +345,7 @@ export default function CareerLabsPage() {
             <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
               Job Readiness Lab: Learn CV writing, interview preparation, professional etiquette, communication, and workplace readiness
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Prepare effectively for job applications and interviews with professional documents and interpersonal skills.
             </p>
           </motion.div>
@@ -373,7 +362,7 @@ export default function CareerLabsPage() {
             <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
               Social Media for Business Lab: Learn how to create posts, manage pages, write captions, and promote small businesses online
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Build skills to leverage social media for business growth, customer engagement, and brand development.
             </p>
           </motion.div>
@@ -390,7 +379,7 @@ export default function CareerLabsPage() {
             <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
               Sales and Presentation Lab: Learn how to pitch ideas, present products, and communicate value with confidence
             </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Develop confidence and skills in presenting ideas, showcasing products, and communicating value effectively to audiences.
             </p>
           </motion.div>
@@ -407,7 +396,7 @@ export default function CareerLabsPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Who It Is For
             </h2>
           </motion.div>
@@ -425,10 +414,10 @@ export default function CareerLabsPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Secondary school graduates
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Recent graduates looking to gain practical skills while waiting for university admission or career decisions.
               </p>
             </motion.div>
@@ -439,10 +428,10 @@ export default function CareerLabsPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Students waiting for university, polytechnic, or college of education admission
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Use the waiting period productively to gain skills that will give you an advantage in your future studies.
               </p>
             </motion.div>
@@ -453,10 +442,10 @@ export default function CareerLabsPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Young people looking for career direction
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Discover your strengths and interests through hands-on skill development in various practical areas.
               </p>
             </motion.div>
@@ -467,10 +456,10 @@ export default function CareerLabsPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Aspiring entrepreneurs and vocational learners
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Gain practical business skills whether you have a trade skill or are looking to start a business venture.
               </p>
             </motion.div>
@@ -481,10 +470,10 @@ export default function CareerLabsPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Parents who want their children to use the waiting period productively
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Give your teenager valuable skills and confidence while they wait for their next educational step.
               </p>
             </motion.div>
@@ -502,10 +491,10 @@ export default function CareerLabsPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Ready to Gain Immediate Skills?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Join our Career Labs and walk away with practical skills, confidence, and portfolio items that demonstrate your abilities to employers and educational institutions.
             </p>
           </motion.div>

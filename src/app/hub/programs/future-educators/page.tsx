@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -22,18 +23,6 @@ import {
   Palette,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "Future Educators Academy - ClearPath Edu Hub",
-  description:
-    "ClearPath Edu Hub's Future Educators Academy prepares the next generation of teachers with 21st-century teaching methods, classroom technology, communication skills, and practical teaching strategies.",
-  alternates: { canonical: "/hub/programs/future-educators" },
-  openGraph: {
-    title: "Future Educators Academy | ClearPath Edu Hub",
-    description:
-      "Prepare for a career in education with ClearPath's Future Educators Academy - learn modern teaching methods, classroom technology, and gain practical experience before university.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -221,7 +210,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Young people interested in teaching, education, child development, school leadership, or e-learning
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Aspiring educators exploring their passion for teaching and learning.
               </p>
             </motion.div>
@@ -274,7 +263,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 EdTech tools
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Master educational technology tools that enhance teaching and learning in modern classrooms.
               </p>
             </motion.div>
@@ -288,7 +277,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Learner psychology
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Understand how students learn and develop strategies to support diverse learning needs.
               </p>
             </motion.div>
@@ -302,7 +291,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Public speaking
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop confidence and skills in presenting information clearly and engagingly to audiences.
               </p>
             </motion.div>
@@ -316,7 +305,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Classroom communication
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn effective communication strategies for managing classrooms and interacting with students.
               </p>
             </motion.div>
@@ -330,7 +319,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Lesson presentation
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Practice delivering lessons with confidence, clarity, and student engagement.
               </p>
             </motion.div>
@@ -344,7 +333,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Online learning platforms
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Gain experience with global learning platforms like Coursera, Alison, and YouTube Learning.
               </p>
             </motion.div>
@@ -383,7 +372,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Lesson plan
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create comprehensive, standards-aligned lesson plans for various subjects and grade levels.
               </p>
             </motion.div>
@@ -397,7 +386,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Teaching presentation
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop and deliver engaging teaching presentations using modern presentation tools.
               </p>
             </motion.div>
@@ -411,7 +400,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Short teaching video
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Record and edit short teaching demonstrations showcasing your instructional skills.
               </p>
             </motion.div>
@@ -425,7 +414,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Online course certificate
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Earn certificates from global learning platforms demonstrating your commitment to professional development.
               </p>
             </motion.div>
@@ -439,7 +428,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Classroom reflection report
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Reflect on your teaching experiences and develop actionable plans for improvement.
               </p>
             </motion.div>
@@ -453,7 +442,7 @@ export default function FutureEducatorsAcademyPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 ClearPath certificate
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Receive official recognition from ClearPath Edu Hub for completing the Future Educators Academy.
               </p>
             </motion.div>
@@ -474,7 +463,7 @@ export default function FutureEducatorsAcademyPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Ready to Begin Your Teaching Journey?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Join our Future Educators Academy and gain the skills, confidence, and portfolio you need to succeed in education studies and beyond.
             </p>
           </motion.div>

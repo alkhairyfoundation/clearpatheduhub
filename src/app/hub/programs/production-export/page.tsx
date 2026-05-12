@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -23,21 +24,9 @@ import {
   Package,
   Truck,
   Factory,
-  ChartIncreasing,
+  ChartBarIncreasing,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-export const metadata: Metadata = {
-  title: "Production and Export Starter Program - ClearPath Edu Hub",
-  description:
-    "ClearPath Edu Hub's Production and Export Starter Program introduces young entrepreneurs to local production, packaging, branding, product quality, and export awareness for wider markets.",
-  alternates: { canonical: "/hub/programs/production-export" },
-  openGraph: {
-    title: "Production and Export Starter Program | ClearPath Edu Hub",
-    description:
-      "Learn how to take local products to global markets with ClearPath's Production and Export Starter Program - covering production, packaging, branding, quality control, and export basics.",
-  },
-};
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -197,7 +186,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Secondary school leavers
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Recent graduates interested in starting production-based businesses.
               </p>
             </motion.div>
@@ -211,7 +200,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Vocational students
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Students learning production-related trades who want to add business skills.
               </p>
             </motion.div>
@@ -225,7 +214,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Young entrepreneurs
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Individuals with business ideas looking for structured guidance and support.
               </p>
             </motion.div>
@@ -239,7 +228,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Students interested in agriculture, production, packaging, and export
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Those passionate about farming, food production, or product creation looking to scale their ideas.
               </p>
             </motion.div>
@@ -278,7 +267,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Product branding
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn to create unique brand identities that resonate with your target audience and differentiate your products in the market.
               </p>
             </motion.div>
@@ -292,7 +281,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Packaging
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn effective packaging design that protects products, appeals to customers, and meets regulatory requirements.
               </p>
             </motion.div>
@@ -306,7 +295,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Value addition
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn techniques to enhance product value through processing, formulation, or presentation that justifies premium pricing.
               </p>
             </motion.div>
@@ -320,7 +309,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Quality control
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn quality assurance methods and testing procedures to ensure consistent product excellence and customer satisfaction.
               </p>
             </motion.div>
@@ -334,7 +323,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Product photography
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn techniques for taking professional-quality photos of your products to showcase them online and in marketing materials.
               </p>
             </motion.div>
@@ -345,10 +334,10 @@ export default function ProductionExportStarterPage() {
               variants={fadeUp}
               className="bg-white rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[font-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Local market research
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn how to research and understand local market needs, preferences, and competition to inform product development.
               </p>
             </motion.div>
@@ -362,7 +351,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Export basics
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Learn the fundamentals of international trade, including documentation, regulations, and logistics for exporting products.
               </p>
             </motion.div>
@@ -376,7 +365,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Sales planning
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop effective sales strategies and plans to reach customers and achieve business goals.
               </p>
             </motion.div>
@@ -415,7 +404,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Product concept
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop and refine your product idea into a viable concept with clear value proposition and target market.
               </p>
             </motion.div>
@@ -429,7 +418,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Product label
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create professional product labels that include all required information and appeal to your target customers.
               </p>
             </motion.div>
@@ -443,7 +432,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Packaging idea
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Develop innovative packaging concepts that protect your product, enhance shelf appeal, and align with your brand.
               </p>
             </motion.div>
@@ -457,7 +446,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Product photos or sample
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create product samples and professional photos to showcase your work and test market response.
               </p>
             </motion.div>
@@ -471,7 +460,7 @@ export default function ProductionExportStarterPage() {
               <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 Basic sales plan
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Create a simple but effective sales plan outlining your target market, pricing strategy, and sales channels.
               </p>
             </motion.div>
@@ -482,10 +471,10 @@ export default function ProductionExportStarterPage() {
               variants={fadeUp}
               className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3>
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
                 ClearPath certificate
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Receive official recognition from ClearPath Edu Hub for completing the Production and Export Starter Program.
               </p>
             </motion.div>
@@ -506,7 +495,7 @@ export default function ProductionExportStarterPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
               Ready to Start Your Production Journey?
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Join our Production and Export Starter Program and learn how to transform local ideas into products ready for wider markets.
             </p>
           </motion.div>
