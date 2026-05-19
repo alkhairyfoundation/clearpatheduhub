@@ -14,8 +14,8 @@ const quickLinks = [
 
 const schoolLinks = [
   { label: "About the School", href: "/school#about" },
-  { label: "Elementary School", href: "/school#elementary" },
-  { label: "College (JSS/SSS)", href: "/school#college" },
+  { label: "Elementary School", href: "/school/elementary" },
+  { label: "College (JSS/SSS)", href: "/school/college" },
   { label: "Advanced School", href: "/school#advanced" },
   { label: "Admissions", href: "/school#admissions" },
 ];

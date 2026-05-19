@@ -44,13 +44,14 @@ export async function POST(request: NextRequest) {
       timestamp: submission.createdAt.toISOString(),
     });
 
-    // TODO: In production, also send email notification:
-    // - Admin notification email
-    // - Auto-reply to the enquirer
-    // Uncomment and configure when email service is set up:
-    //
-    // await sendNotificationEmail({ name, phone, email, message, interest });
-    // await sendAutoReplyEmail({ name, email });
+    // Attempt email notification if SMTP is configured
+    try {
+      const { sendContactNotification } = await import("@/lib/email");
+      await sendContactNotification({ name, phone, email, message, interest });
+    } catch {
+      // Email service not configured - notification logged to console instead
+      console.log("Email notification skipped (configure SMTP env vars to enable)");
+    }
 
     return NextResponse.json(
       { success: true, message: "Thank you for your message. We will get back to you within one business day." },

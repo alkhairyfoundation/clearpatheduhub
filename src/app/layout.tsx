@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import SiteNavigation from "@/components/site-navigation";
 import SiteFooter from "@/components/site-footer";
+import { Providers } from "@/components/providers";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -69,10 +70,12 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${montserrat.variable} antialiased bg-cp-cream text-foreground`}
       >
-        <SiteNavigation />
-        <main className="min-h-screen">{children}</main>
-        <SiteFooter />
-        <Toaster />
+        <Providers>
+          <SiteNavigation />
+          <main className="min-h-screen">{children}</main>
+          <SiteFooter />
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

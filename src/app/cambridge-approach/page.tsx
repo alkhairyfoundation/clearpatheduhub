@@ -344,6 +344,52 @@ export default function CambridgeApproachPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* ════════════════ APPLICATION PROCESS ════════════════ */}
+      <section id="application-process" className="py-20 sm:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+              Start Your Cambridge Journey
+            </span>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Ready to Experience the Cambridge Advantage?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Take the first step toward a globally competitive Cambridge education at ClearPath. Our admissions team is ready to guide you through the process.
+            </p>
+          </motion.div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-cp-green hover:bg-cp-green-light text-white font-semibold rounded-full px-8 group"
+            >
+              <Link href="/admissions">
+                Apply Now
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-cp-gold text-white hover:bg-cp-gold-light font-semibold rounded-full px-8 group"
+            >
+              <Link href="/contact">
+                Contact Admissions
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

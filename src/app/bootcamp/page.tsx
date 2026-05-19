@@ -260,6 +260,7 @@ export default function BootcampPage() {
                 Recent secondary school graduates
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Who have just completed their secondary education and want to make productive use of their time while awaiting admission.
               </p>
             </motion.div>
 
@@ -273,6 +274,7 @@ export default function BootcampPage() {
                 Students waiting for university, polytechnic, or college of education admission
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Who are in the waiting period and don&apos;t want to waste precious months before their tertiary education begins.
               </p>
             </motion.div>
 
@@ -286,6 +288,7 @@ export default function BootcampPage() {
                 Young people looking for career direction
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Who are unsure about their next steps and need guidance to discover their strengths and potential career paths.
               </p>
             </motion.div>
 
@@ -299,6 +302,7 @@ export default function BootcampPage() {
                 Aspiring entrepreneurs and vocational learners
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Who want to develop practical digital skills and an entrepreneurial mindset early to kickstart their ventures.
               </p>
             </motion.div>
 
@@ -312,6 +316,7 @@ export default function BootcampPage() {
                 Parents who want their children to use the waiting period productively
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Who understand the value of continuous learning and want to give their children a competitive edge before university.
               </p>
             </motion.div>
           </motion.div>
@@ -364,7 +369,7 @@ export default function BootcampPage() {
                 Location
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                ClearPath Edu Hub, [Insert Physical Address]
+                ClearPath Edu Hub, Yanbule Street, Bashorun, Ibadan
               </p>
             </motion.div>
 
@@ -378,7 +383,7 @@ export default function BootcampPage() {
                 Start Date
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                [Insert Date]
+                July 2025
               </p>
             </motion.div>
 
@@ -392,7 +397,7 @@ export default function BootcampPage() {
                 Schedule
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                [Insert Days and Time]
+                Mondays to Fridays, 9:00 AM - 2:00 PM
               </p>
             </motion.div>
 
@@ -445,6 +450,7 @@ export default function BootcampPage() {
                 Certificate of Completion from ClearPath Edu Hub
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                A formal certificate recognising their participation and successful completion of the 4-week bootcamp program.
               </p>
             </motion.div>
 
@@ -458,6 +464,7 @@ export default function BootcampPage() {
                 The Advantage Portfolio: A digital folder containing their CV, career plan, digital skills project, and mini project
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                A comprehensive digital portfolio showcasing everything they have built and learned during the bootcamp.
               </p>
             </motion.div>
 
@@ -471,6 +478,7 @@ export default function BootcampPage() {
                 Career Direction: A clearer understanding of what to do after secondary school
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Articulated career goals, a personalised roadmap, and the confidence to pursue their chosen path with clarity.
               </p>
             </motion.div>
 
@@ -484,6 +492,7 @@ export default function BootcampPage() {
                 Priority Access: Bootcamp graduates can receive priority admission or discounts for specialized ClearPath programs such as Future Educators Academy, Skill-to-Enterprise Program, and Production and Export Starter Program
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
+                Exclusive access to advanced ClearPath programs at discounted rates for all bootcamp graduates.
               </p>
             </motion.div>
           </motion.div>
@@ -513,10 +522,10 @@ export default function BootcampPage() {
             className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
           >
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Investment: [Insert Price].
+              Investment: ₦50,000.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Early Bird Offer: Register before [Insert Date] and receive [Insert Discount or Bonus].
+              Early Bird Offer: Register before June 30, 2025 and receive 20% off.
             </p>
           </motion.div>
 
