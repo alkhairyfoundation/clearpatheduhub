@@ -20,6 +20,15 @@ import {
   Globe,
   Shield,
   CheckCircle2,
+  FileText,
+  School,
+  Compass,
+  MessageSquare,
+  BarChart3,
+  PenTool,
+  Code2,
+  Palette,
+  Rocket,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -31,6 +40,92 @@ const fadeUp = {
   hidden: { opacity: 0, y: 25 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
+
+const promises = [
+  "Read confidently",
+  "Think mathematically",
+  "Ask thoughtful questions",
+  "Communicate clearly",
+  "Demonstrate integrity",
+  "Love learning",
+];
+
+const whyFamilies = [
+  {
+    icon: Heart,
+    title: "Faith & Character",
+    desc: "Islamic values and character education are woven into every part of school life—not taught as a subject, but lived as a practice.",
+  },
+  {
+    icon: Target,
+    title: "Mastery Learning",
+    desc: "Children advance when they demonstrate real understanding, not when the calendar says so. Every child masters each concept before moving forward.",
+  },
+  {
+    icon: Globe,
+    title: "Internationally Benchmarked Curriculum",
+    desc: "Our curriculum draws on global best practices including Cambridge English, Singapore Mathematics, and inquiry-based science.",
+  },
+  {
+    icon: BookOpen,
+    title: "Strong Literacy & Numeracy",
+    desc: "Reading and mathematics are the gateways to all learning. We invest deeply in ensuring every child builds strong foundations in both.",
+  },
+  {
+    icon: Zap,
+    title: "Future Skills & AI Readiness",
+    desc: "We prepare children for a world shaped by technology—developing digital literacy, critical thinking, creativity, and adaptability from the earliest years.",
+  },
+  {
+    icon: Users,
+    title: "Parent Partnership",
+    desc: "Parents are not just informed—they are involved. You receive regular updates, competency reports, and meaningful opportunities to partner with teachers.",
+  },
+];
+
+const developmentalDomains = [
+  {
+    icon: Heart,
+    title: "Faith, Character & Identity",
+    desc: "Developing love for Allah, strong moral character, and a confident sense of self rooted in Islamic values.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Language & Communication",
+    desc: "Building strong oral language, reading, writing, and communication skills across English and Arabic.",
+  },
+  {
+    icon: Brain,
+    title: "Mathematical Thinking",
+    desc: "Developing logical reasoning, problem-solving, and numerical fluency through Singapore Mathematics.",
+  },
+  {
+    icon: Compass,
+    title: "Scientific Discovery & Inquiry",
+    desc: "Fostering curiosity, observation, and exploration through hands-on inquiry-based science.",
+  },
+  {
+    icon: Users,
+    title: "Personal, Social & Physical Development",
+    desc: "Nurturing emotional intelligence, social skills, physical health, and personal responsibility.",
+  },
+  {
+    icon: Rocket,
+    title: "Creativity, Technology & Future Skills",
+    desc: "Encouraging creative expression, digital literacy, and the adaptive skills needed for tomorrow's world.",
+  },
+];
+
+const philosophyPrinciples = [
+  "Every child can learn.",
+  "Every child learns differently.",
+  "Strong foundations matter more than early acceleration.",
+  "Reading is the gateway to learning.",
+  "Mathematics is a way of thinking.",
+  "Assessment should improve learning.",
+  "Parents are partners.",
+  "Education prepares children for life, not only examinations.",
+];
 
 export default function ElementaryPage() {
   return (
@@ -77,7 +172,7 @@ export default function ElementaryPage() {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
           >
-            Building Strong Foundations for Life
+            Building Strong Foundations for Lifelong Learning
           </motion.h1>
 
           {/* Subheading */}
@@ -87,7 +182,7 @@ export default function ElementaryPage() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            ClearPath Elementary provides a nurturing Islamic learning environment where young learners build confidence, literacy, numeracy, discipline, and curiosity from the earliest years.
+            ClearPath Elementary is a competency-based elementary school where children master essential skills, develop strong character, and build the confidence to thrive in an ever-changing world.
           </motion.p>
 
           {/* CTAs */}
@@ -102,18 +197,28 @@ export default function ElementaryPage() {
               size="lg"
               className="bg-white text-cp-green hover:bg-white/90 font-semibold px-8 py-6 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-white/15 group"
             >
-              <Link href="#about-elementary">
-                About ClearPath Elementary
+              <Link href="/contact">
+                Book a School Tour
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
             <Button
               asChild
               size="lg"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 font-semibold px-8 py-6 rounded-full text-base transition-all duration-300 group"
+            >
+              <a href="/clearpath-application-form.pdf" target="_blank" rel="noopener noreferrer">
+                Download Our Prospectus
+                <FileText className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
               className="bg-cp-gold text-white hover:bg-cp-gold-light font-semibold px-8 py-6 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-cp-gold/25 group"
             >
-              <Link href="#admissions-section">
-                Apply to Elementary
+              <Link href="/contact">
+                Apply for Admission
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -121,36 +226,7 @@ export default function ElementaryPage() {
         </div>
       </section>
 
-      {/* ════════════════ ABOUT CLEARPATH ELEMENTARY ════════════════ */}
-      <section id="about-elementary" className="py-20 sm:py-28 bg-cp-cream">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              About ClearPath Elementary
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
-          >
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              The elementary years are the foundation of every child's future. At ClearPath Elementary, we take this stage seriously. We do not only teach children to read, write, and calculate - we help them develop the right habits, values, confidence, and love for learning. Our elementary school was established to provide young learners with a strong start in an environment that is safe, caring, structured, and grounded in Islamic values.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ════════════════ WHAT WE FOCUS ON ════════════════ */}
+      {/* ════════════════ EVERY CHILD DESERVES MORE THAN PROMOTION ════════════════ */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -158,108 +234,19 @@ export default function ElementaryPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              What We Focus On
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-6">
+              Every Child Deserves More Than Promotion
             </h2>
-          </motion.div>
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {/* Strong literacy and reading culture */}
-            <motion.div
-              key="literacy"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Strong literacy and reading culture
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We build a strong foundation in literacy and reading, fostering a love for books and stories from an early age.
-              </p>
-            </motion.div>
-
-            {/* Numeracy and problem-solving skills */}
-            <motion.div
-              key="numeracy"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Numeracy and problem-solving skills
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Students develop strong mathematical thinking and problem-solving abilities through hands-on activities and real-world applications.
-              </p>
-            </motion.div>
-
-            {/* Islamic values, manners, and discipline */}
-            <motion.div
-              key="islamic-values"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Islamic values, manners, and discipline
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We nurture love for Allah and His Messenger (ﷺ), teaching Islamic values, manners, and self-discipline through daily practice and positive role modeling.
-              </p>
-            </motion.div>
-
-            {/* Confidence and communication */}
-            <motion.div
-              key="confidence"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Confidence and communication
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We help students build self-confidence and effective communication skills through presentations, group work, and public speaking opportunities.
-              </p>
-            </motion.div>
-
-            {/* Creativity, curiosity, and guided exploration */}
-            <motion.div
-              key="creativity"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Creativity, curiosity, and guided exploration
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We encourage creativity and curiosity through art projects, science experiments, and guided exploration that allows students to discover and learn at their own pace.
-              </p>
-            </motion.div>
-
-            {/* Early identification of learning gaps */}
-            <motion.div
-              key="learning-gaps"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Early identification of learning gaps
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We use a structured diagnostic system to discover where each student needs support, ensuring no child falls behind.
-              </p>
-            </motion.div>
+            <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
+              At ClearPath, we believe children should move forward because they are ready—not simply because another school year has ended. We focus on mastery, curiosity, character, and confidence, ensuring every learner develops the strong foundations needed for lifelong success.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* ════════════════ OUR LEARNING APPROACH ════════════════ */}
+      {/* ════════════════ OUR PROMISE ════════════════ */}
       <section className="py-20 sm:py-28 bg-cp-cream">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -270,25 +257,35 @@ export default function ElementaryPage() {
             className="text-center mb-16"
           >
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              Our Learning Approach
+              Our Promise
             </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Every child who walks through our doors will:
+            </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-3xl mx-auto"
           >
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              At the elementary level, children need patient guidance and strong structure. Our teachers help pupils learn step by step while paying attention to their individual pace and needs. We combine classroom teaching, guided practice, simple projects, reading activities, numeracy development, and moral instruction to ensure that each child grows academically and personally.
-            </p>
+            {promises.map((promise) => (
+              <motion.div
+                key={promise}
+                variants={fadeUp}
+                className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-cp-green shrink-0" />
+                <span className="text-foreground/80 text-sm font-medium">{promise}</span>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* ════════════════ WHY PARENTS CHOOSE CLEARPATH ELEMENTARY ════════════════ */}
+      {/* ════════════════ WHY FAMILIES CHOOSE CLEARPATH ════════════════ */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -299,7 +296,7 @@ export default function ElementaryPage() {
             className="text-center mb-16"
           >
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              Why Parents Choose ClearPath Elementary
+              Why Families Choose ClearPath
             </h2>
           </motion.div>
 
@@ -310,94 +307,210 @@ export default function ElementaryPage() {
             viewport={{ once: true, margin: "-50px" }}
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {/* Safe and caring Islamic school environment */}
+            {whyFamilies.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
+              >
+                <div className="w-10 h-10 bg-cp-green/10 rounded-xl flex items-center justify-center mb-4">
+                  <item.icon className="w-5 h-5 text-cp-green" />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ HOW LEARNING HAPPENS ════════════════ */}
+      <section className="py-20 sm:py-28 bg-cp-cream">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              How Learning Happens
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              The ClearPath LEARN Model guides every child's learning journey:
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid gap-4 sm:grid-cols-5 max-w-4xl mx-auto"
+          >
+            {[
+              { step: "Love Learning", desc: "Spark curiosity and a love for discovery" },
+              { step: "Explore", desc: "Investigate ideas through guided inquiry" },
+              { step: "Apply", desc: "Use knowledge in real-world contexts" },
+              { step: "Reflect", desc: "Think about what was learned and how" },
+              { step: "Next Challenge", desc: "Advance to the next level of mastery" },
+            ].map((item, i) => (
+              <motion.div
+                key={item.step}
+                variants={fadeUp}
+                className="text-center"
+              >
+                <div className="w-14 h-14 bg-white rounded-2xl border border-gray-100 flex items-center justify-center mx-auto mb-3 shadow-sm">
+                  <span className="font-bold text-cp-green text-lg">{i + 1}</span>
+                </div>
+                <h3 className="font-semibold text-cp-green text-sm mb-1">{item.step}</h3>
+                <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ OUR CURRICULUM ════════════════ */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Our Curriculum
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Learning is organised around six developmental domains:
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {developmentalDomains.map((domain) => (
+              <motion.div
+                key={domain.title}
+                variants={fadeUp}
+                className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
+              >
+                <div className="w-10 h-10 bg-cp-green/10 rounded-xl flex items-center justify-center mb-4">
+                  <domain.icon className="w-5 h-5 text-cp-green" />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
+                  {domain.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {domain.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Early Years & Primary subsections */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid gap-6 md:grid-cols-2 mt-12"
+          >
             <motion.div
-              key="safe-environment"
               variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
+              className="bg-white border border-gray-100 rounded-2xl p-7"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                A safe and caring Islamic school environment
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-cp-green mb-3">
+                Early Years
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Our school provides a secure, nurturing environment where Islamic values are practiced and respected, giving parents peace of mind.
+                Playgroup through Nursery 3 is designed around child development and school readiness, ensuring children master foundational literacy, numeracy, language, social, and emotional skills before entering Grade 1.
               </p>
             </motion.div>
-
-            {/* Strong academic foundation from the early years */}
             <motion.div
-              key="academic-foundation"
               variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
+              className="bg-white border border-gray-100 rounded-2xl p-7"
             >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Strong academic foundation from the early years
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-cp-green mb-3">
+                Primary School
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                We build essential academic skills early, setting students up for success in their future educational journey.
-              </p>
-            </motion.div>
-
-            {/* Attention to each child's learning needs */}
-            <motion.div
-              key="individual-attention"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Attention to each child's learning needs
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We recognize that every child learns differently and provide personalized support to ensure each student reaches their full potential.
-              </p>
-            </motion.div>
-
-            {/* Preparation for future success in secondary school */}
-            <motion.div
-              key="future-preparation"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Preparation for future success in secondary school
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Our elementary program prepares students not just for the next grade, but for lifelong learning and success.
-              </p>
-            </motion.div>
-
-            {/* Character-building alongside academics */}
-            <motion.div
-              key="character-building"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Character-building alongside academics
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                We believe that good results must be matched with good conduct, developing both academic excellence and strong character.
-              </p>
-            </motion.div>
-
-            {/* Expected Outcomes */}
-            <motion.div
-              key="expected-outcomes"
-              variants={fadeUp}
-              className="bg-cp-cream rounded-2xl p-6 border border-gray-100"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
-                Expected Outcomes
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                By the end of their elementary journey, our pupils are expected to become confident, disciplined, curious, and prepared for the academic demands of secondary education. They become confident readers and communicators with stronger numeracy and reasoning skills, better manners and Islamic consciousness, and readiness for secondary school learning.
+                Competency-based learning using internationally benchmarked resources including Cambridge English, Singapore Mathematics, inquiry-based science, Global Perspectives, and ClearPath-developed Faith &amp; Character.
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* ════════════════ ELEMENTARY ADMISSION CTA ════════════════ */}
+      {/* ════════════════ OUR EDUCATIONAL PHILOSOPHY ════════════════ */}
+      <section className="py-20 sm:py-28 bg-cp-cream">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Our Educational Philosophy
+            </h2>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid gap-4 sm:grid-cols-2 max-w-4xl mx-auto"
+          >
+            {philosophyPrinciples.map((principle) => (
+              <motion.div
+                key={principle}
+                variants={fadeUp}
+                className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-gray-100"
+              >
+                <CheckCircle2 className="w-5 h-5 text-cp-gold shrink-0" />
+                <span className="text-foreground/80 text-sm">{principle}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ PARENT PARTNERSHIP ════════════════ */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Parent Partnership
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
+              Parents receive meaningful progress updates, competency reports, intervention plans where needed, and regular opportunities to partner with teachers.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ ADMISSIONS ════════════════ */}
       <section id="admissions-section" className="py-20 sm:py-28 section-gradient-green relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-15 pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -409,35 +522,17 @@ export default function ElementaryPage() {
             className="text-center"
           >
             <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-7 h-7 text-cp-gold" />
+              <School className="w-7 h-7 text-cp-gold" />
             </div>
             <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
               Elementary Admission
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white mb-5">
-              Give Your Child a Strong Foundation
+              Start Your Child's Journey
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto leading-relaxed mb-6">
-              Admissions are now open for the new session. Apply now to give your child the strong foundation they need for lifelong success.
+              Our admissions process is simple, with a learner assessment focused on understanding each child's current stage and supporting their future growth.
             </p>
-            <div className="bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 max-w-lg mx-auto mb-8 text-left">
-              <h3 className="text-white font-semibold mb-3">How to Apply</h3>
-              <ul className="space-y-2.5">
-                {[
-                  "Obtain the application form in-person at the Client Service Office or online via our admissions portal",
-                  "Complete and submit the application form with required documents",
-                  "Schedule your entrance assessment date from May 9th onwards",
-                  "Await assessment results and admission offer",
-                ].map((step, i) => (
-                  <li key={i} className="flex items-start gap-3 text-white/80 text-sm">
-                    <span className="w-6 h-6 bg-cp-gold/20 text-cp-gold rounded-full flex items-center justify-center text-xs font-bold shrink-0">
-                      {i + 1}
-                    </span>
-                    <span>{step}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 asChild
@@ -445,7 +540,7 @@ export default function ElementaryPage() {
                 className="bg-cp-gold hover:bg-cp-gold-light text-white font-semibold rounded-full px-8 group"
               >
                 <Link href="/contact">
-                  Apply Now
+                  Apply for Admission
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>

@@ -35,33 +35,33 @@ const fadeUp = {
 const elementaryPillars = [
   {
     icon: BookOpen,
-    title: "Academic Excellence",
-    desc: "We provide a rich, well-structured curriculum that builds strong literacy, numeracy, and science skills while encouraging curiosity and critical thinking from an early age. Every child is given the foundation they need to succeed academically.",
+    title: "Mastery Learning",
+    desc: "Children advance when they demonstrate real understanding, not simply because another school year has ended. Every child masters each concept before moving forward.",
   },
   {
     icon: Heart,
-    title: "Strong Islamic Foundation",
-    desc: "Children are nurtured with love for Allah and His Messenger (ﷺ), through daily Qur'an sessions, Hadith stories, Salah practice, and a values-based Islamic learning approach. Faith is woven into every aspect of the school day.",
+    title: "Faith & Character",
+    desc: "Islamic values and character education are woven into every part of school life—nurturing love for Allah and His Messenger (ﷺ) through daily practice, Qur'an sessions, and positive role modeling.",
   },
   {
     icon: Lightbulb,
-    title: "Critical Thinking & Creativity",
-    desc: "Our classrooms are lively and inquiry-based, encouraging children to ask questions, explore solutions, and express their ideas confidently—both in academics and life. We believe every child is naturally curious, and we protect that curiosity.",
+    title: "Curiosity & Critical Thinking",
+    desc: "Our classrooms are lively and inquiry-based, encouraging children to ask questions, explore solutions, and think deeply. We protect every child's natural curiosity.",
   },
   {
     icon: Shield,
-    title: "Character Education",
-    desc: "Through daily routines, guided behavior modeling, and thematic lessons, we help pupils build adab, empathy, resilience, and responsibility. Character isn't an add-on—it's the core of everything we do.",
+    title: "Strong Foundations",
+    desc: "We invest deeply in literacy, numeracy, and character—the foundations that unlock all future learning. Reading and mathematics are the gateways to every other subject.",
   },
   {
     icon: Users,
-    title: "Individualized Support",
-    desc: "We recognize that every child learns differently. Our teachers provide personalized attention and support, ensuring no child is left behind. Small class sizes and dedicated staff make this possible.",
+    title: "Parent Partnership",
+    desc: "Parents receive meaningful progress updates, competency reports, and regular opportunities to partner with teachers. Education is a shared journey between home and school.",
   },
   {
     icon: Palette,
-    title: "Holistic Development",
-    desc: "Beyond academics, we nurture the whole child through physical education, creative arts, Arabic language, Qur'anic studies, and social development activities. Every facet of growth matters.",
+    title: "Future Skills & Readiness",
+    desc: "We prepare children for a world shaped by technology—developing digital literacy, creativity, adaptability, and confidence from the earliest years.",
   },
 ];
 
@@ -260,11 +260,7 @@ export default function SchoolPage() {
               Elementary School
             </h2>
             <p className="text-foreground/70 max-w-3xl leading-relaxed">
-              ClearPath Elementary meets each child at the start of their journey,
-              building strong academic and Islamic foundations that shape character
-              and inspire lifelong excellence. Our approach is age-appropriate,
-              nurturing, and designed to develop the whole child—academically,
-              spiritually, socially, and emotionally.
+              ClearPath Elementary is a competency-based school where children master essential skills, develop strong character, and build the confidence to thrive. We focus on mastery, curiosity, character, and confidence—ensuring every learner develops the strong foundations needed for lifelong success.
             </p>
           </motion.div>
 
@@ -278,36 +274,25 @@ export default function SchoolPage() {
           >
             {[
               {
-                title: "Early Years Foundation Stage",
+                title: "Early Years (Playgroup – Nursery 3)",
                 features: [
-                  "Age-appropriate learning environment",
-                  "Early reading and writing skills",
-                  "Play-based learning approach",
-                  "Social development focus",
-                  "Basic Islamic knowledge",
-                  "Motor skills development",
+                  "Child development and school readiness focus",
+                  "Foundational literacy and numeracy",
+                  "Social and emotional skill building",
+                  "Play-based and guided exploration",
+                  "Basic Islamic knowledge and Arabic",
+                  "Motor skills and creative expression",
                 ],
               },
               {
-                title: "Nursery Program",
+                title: "Primary School (Grades 1–6)",
                 features: [
-                  "Structured learning introduction",
-                  "Basic numeracy and literacy",
-                  "Islamic values integration",
-                  "Physical development",
-                  "Creative expression",
-                  "Social interaction",
-                ],
-              },
-              {
-                title: "Primary Education (Grades 1–6)",
-                features: [
-                  "Strong academic curriculum",
-                  "Character development",
-                  "Critical thinking skills",
-                  "Physical education",
-                  "Arabic language",
-                  "Qur'anic studies",
+                  "Competency-based mastery learning",
+                  "Cambridge English & Singapore Mathematics",
+                  "Inquiry-based science and Global Perspectives",
+                  "ClearPath-developed Faith & Character curriculum",
+                  "Digital literacy and future skills",
+                  "Character, leadership, and confidence building",
                 ],
               },
             ].map((group) => (
