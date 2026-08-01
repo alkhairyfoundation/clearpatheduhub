@@ -23,6 +23,7 @@ const navLinks = [
       { label: "Elementary", href: "/school/elementary" },
       { label: "College (JSS/SSS)", href: "/school/college" },
       { label: "Advanced School", href: "/school#advanced" },
+      { label: "Cambridge Approach", href: "/cambridge-approach" },
       { label: "Admissions", href: "/school#admissions" },
     ],
   },
@@ -41,12 +42,11 @@ const navLinks = [
         { label: "Production & Export Starter", href: "/hub/programs/production-export" },
         { label: "Career Labs", href: "/hub/programs/career-labs" },
       ]},
+      { label: "Bootcamp", href: "/bootcamp" },
     ],
   },
   { label: "About Us", href: "/about" },
-  { label: "Admissions", href: "/admissions" },
-  { label: "Cambridge Approach", href: "/cambridge-approach" },
-  { label: "Bootcamp", href: "/bootcamp" },
+  { label: "News", href: "/news" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -202,7 +202,7 @@ export default function SiteNavigation() {
               asChild
               className="bg-cp-gold hover:bg-cp-gold-light text-white font-semibold px-5 py-2 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-cp-gold/25"
             >
-              <Link href="/contact">Apply Now</Link>
+              <Link href="/admissions">Apply Now</Link>
             </Button>
           </div>
 
@@ -294,7 +294,7 @@ export default function SiteNavigation() {
                     asChild
                     className="bg-cp-gold hover:bg-cp-gold-light text-white font-semibold rounded-full w-full"
                   >
-                    <Link href="/contact" onClick={() => setMobileOpen(false)}>
+                    <Link href="/admissions" onClick={() => setMobileOpen(false)}>
                       Apply Now
                     </Link>
                   </Button>

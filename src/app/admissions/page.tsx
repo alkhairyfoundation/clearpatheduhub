@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -64,7 +64,7 @@ export default function AdmissionsPage() {
           >
             <Sparkles className="w-4 h-4 text-cp-gold" />
             <span className="text-white/85 text-sm font-medium tracking-wider">
-              Consciousness • Competence • Character
+              Consciousness • Character • Competence
             </span>
           </motion.div>
 
@@ -86,7 +86,7 @@ export default function AdmissionsPage() {
             className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             We are excited that you are considering ClearPath Edu Hub for your child's education.
-            We offer a clear path for every child to grow in Consciousness, Competence, and Character.
+            We offer a clear path for every child to grow in Consciousness, Character, and Competence.
           </motion.p>
 
           {/* CTAs */}

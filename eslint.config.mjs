@@ -14,8 +14,7 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
     "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/prefer-as-const": "off",
-    "@typescript-eslint/no-unused-disable-directive": "error",
-    
+
     // React rules
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/purity": "off",
@@ -39,7 +38,8 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
     "no-fallthrough": "error",
     "no-mixed-spaces-and-tabs": "error",
     "no-redeclare": "error",
-    "no-undef": "error",
+    // TypeScript already catches undefined references during type-checking
+    "no-undef": "off",
     "no-unreachable": "error",
     "no-useless-escape": "warn",
   },

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Eye, Target, Heart, ArrowRight } from "lucide-react";
@@ -50,7 +50,7 @@ const timelineEvents = [
     year: "2036",
     title: "Vision for the Next Decade",
     description:
-      "Our vision for the next decade is bold: to become a leading educational ecosystem that impacts communities far beyond Ibadan. Through the Hub's platform, programs, and partnerships, we aim to transform education at scale—raising a generation that embodies Consciousness, Competence, and Character.",
+      "Our vision for the next decade is bold: to become a leading educational ecosystem that impacts communities far beyond Ibadan. Through the Hub's platform, programs, and partnerships, we aim to transform education at scale—raising a generation that embodies Consciousness, Character, and Competence.",
   },
 ];
 
@@ -68,18 +68,6 @@ const threeCs = [
     ],
   },
   {
-    icon: Target,
-    title: "Competence",
-    description:
-      "Mastery of knowledge and skills that create real value. We equip our students and community with the tools, training, and expertise needed to excel in an ever-evolving world. Competence isn't just about passing exams—it's about having the skills and confidence to solve real problems and create meaningful impact.",
-    aspects: [
-      "Academic mastery and critical thinking",
-      "Technical and digital literacy",
-      "Professional and career readiness",
-      "Practical problem-solving skills",
-    ],
-  },
-  {
     icon: Heart,
     title: "Character",
     description:
@@ -91,17 +79,29 @@ const threeCs = [
       "Service orientation and compassion",
     ],
   },
+  {
+    icon: Target,
+    title: "Competence",
+    description:
+      "Mastery of knowledge and skills that create real value. We equip our students and community with the tools, training, and expertise needed to excel in an ever-evolving world. Competence isn't just about passing exams—it's about having the skills and confidence to solve real problems and create meaningful impact.",
+    aspects: [
+      "Academic mastery and critical thinking",
+      "Technical and digital literacy",
+      "Professional and career readiness",
+      "Practical problem-solving skills",
+    ],
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
+        promise="Where Learning Comes First"
         badge="About Us"
         title="A Decade of Impact."
         titleAccent="The Next Chapter Begins."
-        subtitle="From a single college in 2016 to a comprehensive educational ecosystem in 2026—ClearPath has spent ten years building a legacy of faith-centered excellence. Now, we're stepping into a new era as ClearPath Edu Hub."
-        arabic="مدرسة المحجة البيضاء"
+        subtitle="From a single college in 2016 to a comprehensive educational ecosystem in 2026—ClearPath has spent ten years building a legacy of learning-centered excellence. Now, we're stepping into a new era as ClearPath Edu Hub."
       />
 
       {/* ─── Our Story ─── */}
@@ -131,8 +131,8 @@ export default function AboutPage() {
                 institution. Along the way, we expanded to include elementary
                 education, integrated the Cambridge International Curriculum,
                 invested in teacher development, and built a school culture
-                rooted in what we call the 3Cs: Consciousness, Competence, and
-                Character.
+                rooted in what we call the 3Cs: Consciousness, Character, and
+                Competence.
               </p>
               <p>
                 As we mark a decade of existence, we are not just celebrating
@@ -266,7 +266,7 @@ export default function AboutPage() {
               The 3Cs That Guide Everything
             </h2>
             <p className="text-cp-gold font-semibold tracking-wider text-sm uppercase">
-              Consciousness • Competence • Character
+              Consciousness • Character • Competence
             </p>
           </motion.div>
 

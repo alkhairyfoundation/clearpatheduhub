@@ -20,14 +20,17 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "ClearPath Edu Hub — Consciousness • Competence • Character",
+    default: "ClearPath Edu Hub — Where Learning Comes First",
     template: "%s | ClearPath Edu Hub",
   },
   description:
-    "ClearPath Edu Hub is an integrated educational ecosystem—combining strong school structure with platform-enabled learning, training, media and educational products—guided by our DNA: Consciousness, Competence and Character.",
+    "ClearPath is a learning-centred school where every child learns. We know every learner, monitor every learner, support every learner, and celebrate every learner's growth in Consciousness, Character, and Competence.",
   keywords: [
     "ClearPath Edu Hub",
     "ClearPath College",
+    "Where Learning Comes First",
+    "Learning-centred school",
+    "Every Child Can Learn",
     "Islamic School",
     "Cambridge Curriculum",
     "Ibadan School",
@@ -45,18 +48,18 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "ClearPath Edu Hub — A Decade of Excellence. A Future of Purpose.",
+    title: "ClearPath Edu Hub — Where Learning Comes First",
     description:
-      "An integrated educational ecosystem combining strong school structure with platform-enabled learning, training, media and educational products.",
+      "Every child can learn. Every learner deserves to grow. A learning-centred school combining academic excellence with Islamic values and personalised learning.",
     type: "website",
     locale: "en_NG",
     siteName: "ClearPath Edu Hub",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ClearPath Edu Hub — A Decade of Excellence. A Future of Purpose.",
+    title: "ClearPath Edu Hub — Where Learning Comes First",
     description:
-      "An integrated educational ecosystem combining strong school structure with platform-enabled learning, training, media and educational products.",
+      "Every child can learn. Every learner deserves to grow. A learning-centred school combining academic excellence with Islamic values and personalised learning.",
   },
 };
 

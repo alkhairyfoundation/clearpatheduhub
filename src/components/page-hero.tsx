@@ -8,6 +8,7 @@ interface PageHeroProps {
   titleAccent?: string;
   subtitle: string;
   arabic?: string;
+  promise?: string;
 }
 
 export default function PageHero({
@@ -16,9 +17,10 @@ export default function PageHero({
   titleAccent,
   subtitle,
   arabic,
+  promise,
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden section-gradient-green pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section className="relative overflow-hidden hero-gradient-blue pt-32 pb-20 sm:pt-40 sm:pb-28">
       {/* Animated decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -38,6 +40,20 @@ export default function PageHero({
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {promise && (
+          <motion.span
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full px-5 py-2 mb-5"
+          >
+            <span className="w-1.5 h-1.5 bg-cp-gold rounded-full shrink-0" />
+            <span className="text-cp-gold text-xs sm:text-sm font-semibold tracking-wider uppercase">
+              {promise}
+            </span>
+          </motion.span>
+        )}
+
         {badge && (
           <motion.span
             initial={{ opacity: 0, y: 15 }}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -66,7 +66,7 @@ export default function CollegePage() {
           >
             <Sparkles className="w-4 h-4 text-cp-gold" />
             <span className="text-white/85 text-sm font-medium tracking-wider">
-              Consciousness • Competence • Character
+              Consciousness • Character • Competence
             </span>
           </motion.div>
 
@@ -87,7 +87,7 @@ export default function CollegePage() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            ClearPath College combines strong Islamic values, Nigerian curriculum, Cambridge-inspired learning, diagnostic support, and platform-based study to help students master subjects and prepare confidently for the future.
+            ClearPath College is where learning comes first. We combine strong Islamic values, the Nigerian curriculum, Cambridge-inspired learning, and diagnostic support so that every student's progress is known, monitored, and supported—mastering subjects and preparing confidently for the future.
           </motion.p>
 
           {/* CTAs */}

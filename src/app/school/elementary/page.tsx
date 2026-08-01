@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -161,7 +161,7 @@ export default function ElementaryPage() {
           >
             <Sparkles className="w-4 h-4 text-cp-gold" />
             <span className="text-white/85 text-sm font-medium tracking-wider">
-              Consciousness • Competence • Character
+              Consciousness • Character • Competence
             </span>
           </motion.div>
 
@@ -182,7 +182,7 @@ export default function ElementaryPage() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            ClearPath Elementary is a competency-based elementary school where children master essential skills, develop strong character, and build the confidence to thrive in an ever-changing world.
+            ClearPath Elementary is where learning comes first. Through our competency-based approach, we begin by discovering each child's learning level, then teach in the way each child learns best—building strong character, mastering essential skills, and growing in confidence for an ever-changing world.
           </motion.p>
 
           {/* CTAs */}

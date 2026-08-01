@@ -14,73 +14,17 @@ import {
   Eye,
   Target,
   Heart,
-  Quote,
+  Search,
+  BarChart3,
+  LifeBuoy,
+  Rocket,
+  ClipboardCheck,
+  FileText,
+  Megaphone,
+  CheckCircle2,
+  Compass,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-/* ─── Counter Animation ─── */
-function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
-  return (
-    <motion.span
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      {target}{suffix}
-    </motion.span>
-  );
-}
-
-/* ─── Stat Items ─── */
-const stats = [
-  { value: "10+", label: "Years of Excellence" },
-  { value: "2", label: "Curriculum Tracks" },
-  { value: "3", label: "Core Values (3Cs)" },
-  { value: "5+", label: "Hub Programs" },
-];
-
-/* ─── Highlights ─── */
-const highlights = [
-  {
-    icon: BookOpen,
-    title: "Cambridge & National Curriculum",
-    description: "A dual curriculum blending global standards with local relevance, preparing students for both national and international opportunities.",
-  },
-  {
-    icon: Monitor,
-    title: "LMS Platform",
-    description: "Platform-enabled learning that makes education accessible, interactive, and structured—anytime, anywhere.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Project-Based Learning",
-    description: "Hands-on, inquiry-driven approaches that build real-world skills, critical thinking, and creative problem-solving.",
-  },
-  {
-    icon: Award,
-    title: "3Cs Framework",
-    description: "Consciousness, Competence, Character—the DNA that guides everything we do and shapes who our students become.",
-  },
-];
-
-/* ─── Testimonials ─── */
-const testimonials = [
-  {
-    text: "ClearPath College has been an exceptional partner in my child's academic and moral growth. The Islamic foundation, combined with academic excellence, has given me peace of mind as a parent. I can confidently say my child is receiving a well-rounded education that prepares them for both this world and the hereafter. Alhamdulillah for ClearPath!",
-    name: "Hajia Nafisah Banuso",
-    role: "Parent",
-  },
-  {
-    text: "ClearPath College stands out not just for its academic rigor but also for its focus on character development. I have seen significant improvements in my child's discipline, focus, and respect for others. The Cambridge curriculum integration is a welcome development, showing the school's readiness to provide global opportunities for our children.",
-    name: "Dr. Raji",
-    role: "Parent",
-  },
-  {
-    text: "ClearPath College shaped me into the person I am today. Beyond academics, the school instilled in me discipline, confidence, and a strong moral compass. The teachers were more than educators; they were mentors who guided me every step of the way.",
-    name: "Farhat Adedeji",
-    role: "Alumnus",
-  },
-];
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -91,11 +35,157 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
+/* ─── The Problem: Schooling vs Learning ─── */
+const schoolingVsLearning = {
+  schooling: [
+    "Following the syllabus and covering topics",
+    "Moving to the next class because the year ended",
+    "Passing examinations",
+    "Measuring what was taught, not what was learned",
+  ],
+  learning: [
+    "Understanding deeply and truly",
+    "Mastering each concept before moving forward",
+    "Applying knowledge to real life",
+    "Growing in consciousness, character, and competence",
+  ],
+};
+
+/* ─── Our Promise ─── */
+const promisePoints = [
+  {
+    icon: Search,
+    title: "Known",
+    description:
+      "We begin with diagnostic assessment—discovering each learner's strengths, areas of mastery, and specific gaps.",
+  },
+  {
+    icon: BarChart3,
+    title: "Monitored",
+    description:
+      "We track progress continuously, not just at exam time, so no learner's growth goes unnoticed.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Supported",
+    description:
+      "Learning gaps are met with targeted support, intervention, or enrichment—teaching every child according to their needs.",
+  },
+  {
+    icon: Rocket,
+    title: "Developed",
+    description:
+      "Every learner grows in consciousness, character, and competence—ready for the next stage of life.",
+  },
+];
+
+/* ─── The ClearPath Way ─── */
+const clearPathWay = [
+  {
+    icon: Target,
+    title: "Purpose",
+    description: "To ensure that every child learns.",
+  },
+  {
+    icon: Eye,
+    title: "Vision",
+    description:
+      "A generation of learners who know their Lord, understand themselves, think deeply, live responsibly, and contribute meaningfully to society.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Mission",
+    description:
+      "To combine academic excellence with Islamic values, evidence-informed teaching, and personalised learning—so every student understands, masters, and applies what they learn.",
+  },
+  {
+    icon: Heart,
+    title: "Philosophy",
+    description:
+      "Every child can learn. Every teacher must grow. Every lesson must lead to learning.",
+  },
+];
+
+/* ─── How Learning Happens ─── */
+const learningCycle = [
+  {
+    icon: Search,
+    step: "Diagnose",
+    desc: "We begin where each learner is—strengths, mastery, and specific gaps.",
+  },
+  {
+    icon: Compass,
+    step: "Personalise",
+    desc: "Instruction is tailored to each learner's needs—support, intervention, or enrichment.",
+  },
+  {
+    icon: BookOpen,
+    step: "Teach",
+    desc: "Evidence-informed teaching meets learners where they are and moves them forward.",
+  },
+  {
+    icon: BarChart3,
+    step: "Monitor",
+    desc: "Progress is tracked continuously, not just at exam time.",
+  },
+  {
+    icon: Rocket,
+    step: "Grow",
+    desc: "Every learner grows in consciousness, character, and competence.",
+  },
+];
+
+/* ─── Parent Partnership ─── */
+const partnership = [
+  {
+    icon: ClipboardCheck,
+    title: "Progress Updates",
+    description: "Meaningful, regular updates on your child's learning journey.",
+  },
+  {
+    icon: FileText,
+    title: "Competency Reports",
+    description: "Clear reports on what your child has mastered and what comes next.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Intervention Plans",
+    description: "Targeted plans where learning gaps are identified.",
+  },
+  {
+    icon: Users,
+    title: "Engagement Meetings",
+    description: "Real opportunities to partner with teachers and leadership.",
+  },
+];
+
+/* ─── The ClearPath Graduate ─── */
+const graduateValues = [
+  {
+    icon: Eye,
+    title: "Consciousness",
+    description:
+      "Growing in awareness of Allah, understanding themselves, and living purposeful lives.",
+  },
+  {
+    icon: Heart,
+    title: "Character",
+    description:
+      "Developing integrity, discipline, compassion, resilience, and responsibility.",
+  },
+  {
+    icon: Target,
+    title: "Competence",
+    description:
+      "Building the knowledge, skills, and confidence needed to excel in higher education, leadership, and life.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
       {/* ════════════════ HERO ════════════════ */}
-      <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center hero-gradient-blue overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             animate={{ rotate: 360 }}
@@ -125,7 +215,7 @@ export default function HomePage() {
           >
             <Sparkles className="w-4 h-4 text-cp-gold" />
             <span className="text-white/85 text-sm font-medium tracking-wider">
-              Consciousness • Competence • Character
+              Consciousness • Character • Competence
             </span>
           </motion.div>
 
@@ -146,11 +236,9 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-7"
           >
-            A Decade of
+            Where Learning
             <br />
-            <span className="text-gradient-gold">Excellence.</span> A Future of
-            <br />
-            Purpose.
+            <span className="text-gradient-gold">Comes First.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -158,19 +246,30 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-white/80 text-base sm:text-lg max-w-3xl mx-auto mb-10 leading-relaxed"
+            className="text-white/90 text-base sm:text-lg font-semibold max-w-3xl mx-auto mb-4 leading-relaxed"
           >
-            ClearPath Edu Hub is an integrated educational ecosystem—combining
-            strong school structure with platform-enabled learning, training, media
-            and educational products—guided by our DNA: Consciousness, Competence
-            and Character.
+            Every child can learn. Every learner deserves to grow.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.68 }}
+            className="text-white/75 text-base sm:text-lg max-w-3xl mx-auto mb-10 leading-relaxed"
+          >
+            At ClearPath, we believe the true purpose of school is learning.
+            Everything we do—from teaching and assessment to culture and
+            leadership—is designed to ensure that every student grows in
+            consciousness, character, and competence. Because education is more
+            than passing examinations. It is preparing young people to know
+            their Lord, understand themselves, think deeply, live responsibly,
+            and contribute meaningfully to society.
           </motion.p>
 
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.75 }}
+            transition={{ duration: 0.7, delay: 0.78 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
@@ -178,8 +277,8 @@ export default function HomePage() {
               size="lg"
               className="bg-white text-cp-green hover:bg-white/90 font-semibold px-8 py-6 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-white/15 group"
             >
-              <Link href="/school">
-                Explore The School
+              <Link href="/admissions">
+                Apply Now
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -188,8 +287,8 @@ export default function HomePage() {
               size="lg"
               className="bg-cp-gold text-white hover:bg-cp-gold-light font-semibold px-8 py-6 rounded-full text-base transition-all duration-300 hover:shadow-xl hover:shadow-cp-gold/25 group"
             >
-              <Link href="/hub">
-                Explore The Hub
+              <Link href="/contact">
+                Book a School Tour
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -197,34 +296,119 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════ STATS BAR ════════════════ */}
-      <section className="bg-white border-b border-gray-100">
+      {/* ════════════════ ANNOUNCEMENT STRIP ════════════════ */}
+      <section className="bg-cp-green border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 py-4 text-center"
+          >
+            <span className="inline-flex items-center gap-2 text-cp-gold">
+              <Megaphone className="w-4 h-4 shrink-0" />
+              <span className="font-semibold text-sm">Summer Learning Programme begins Monday, 3 August 2026</span>
+            </span>
+            <span className="hidden sm:inline text-white/30">|</span>
+            <span className="text-white/70 text-sm">
+              Support • Intervention • Enrichment for every learner.
+            </span>
+            <Link
+              href="/news"
+              className="inline-flex items-center gap-1 text-white/85 hover:text-white font-semibold text-sm underline underline-offset-4 decoration-cp-gold/50"
+            >
+              Read the announcement
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ THE PROBLEM ════════════════ */}
+      <section className="py-20 sm:py-28 bg-cp-cream pattern-islamic relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+              The Problem
+            </span>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Schooling Is Not the Same as Learning
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Too many children pass through school without truly learning—covering
+              topics they forget, moving up because the calendar moved, and
+              graduating without the foundations they need. At ClearPath, we
+              refuse to mistake attendance for understanding, or covering the
+              curriculum for mastering it.
+            </p>
+          </motion.div>
+
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {stats.map((stat) => (
-              <motion.div
-                key={stat.label}
-                variants={fadeUp}
-                className="py-10 px-6 text-center"
-              >
-                <p className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-1">
-                  {stat.value}
-                </p>
-                <p className="text-muted-foreground text-sm">{stat.label}</p>
-              </motion.div>
-            ))}
+            {/* Schooling */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-white rounded-3xl p-8 border border-gray-100"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-muted-foreground" />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-muted-foreground">
+                  Schooling
+                </h3>
+              </div>
+              <ul className="space-y-4">
+                {schoolingVsLearning.schooling.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-foreground/70 text-sm">
+                    <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center text-muted-foreground text-xs font-bold shrink-0 mt-0.5">
+                      ×
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Learning */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-cp-green rounded-3xl p-8 text-white shadow-xl shadow-cp-green/10"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                  <Lightbulb className="w-5 h-5 text-cp-gold" />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+                  Learning
+                </h3>
+              </div>
+              <ul className="space-y-4">
+                {schoolingVsLearning.learning.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white/85 text-sm">
+                    <CheckCircle2 className="w-5 h-5 text-cp-gold shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* ════════════════ WHY CLEARPATH ════════════════ */}
-      <section className="py-20 sm:py-28 bg-cp-cream pattern-islamic relative">
+      {/* ════════════════ OUR PROMISE ════════════════ */}
+      <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -234,15 +418,14 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
-              Why ClearPath Edu Hub
+              Our Promise
             </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              An Ecosystem Built for Impact
+              Every Child&apos;s Learning Will Be Known, Monitored, Supported, and Developed
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A decade of proven excellence, now evolving into a comprehensive
-              educational ecosystem that transforms learning both inside and
-              beyond the classroom.
+              We know every learner. We monitor every learner. We support every
+              learner. We celebrate every learner&apos;s growth.
             </p>
           </motion.div>
 
@@ -253,16 +436,16 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {highlights.map((item) => (
+            {promisePoints.map((item) => (
               <motion.div
                 key={item.title}
                 variants={fadeUp}
-                className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-xl hover:shadow-cp-green/[0.04] transition-all duration-500 hover:-translate-y-1 hover:border-cp-gold/15"
+                className="group bg-white border border-gray-100 rounded-2xl p-7 hover:shadow-xl hover:shadow-cp-blue/10 transition-all duration-500 hover:-translate-y-1 hover:border-cp-blue/20"
               >
-                <div className="w-12 h-12 bg-cp-green/[0.06] rounded-xl flex items-center justify-center mb-4 group-hover:bg-cp-green/10 transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-cp-green group-hover:text-cp-gold transition-colors duration-300" />
+                <div className="w-12 h-12 bg-cp-blue-lighter rounded-xl flex items-center justify-center mb-4 group-hover:bg-cp-blue/10 transition-colors duration-300">
+                  <item.icon className="w-6 h-6 text-cp-blue group-hover:text-cp-blue-light transition-colors duration-300" />
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] font-semibold text-cp-green text-base mb-2">
+                <h3 className="font-[family-name:var(--font-playfair)] font-bold text-cp-green text-xl mb-2">
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -274,7 +457,230 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════ TWO ARMS ════════════════ */}
+      {/* ════════════════ THE CLEARPATH WAY ════════════════ */}
+      <section className="py-20 sm:py-28 bg-cp-cream">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+              The ClearPath Way
+            </span>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Purpose, Vision, Mission, and Philosophy
+            </h2>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {clearPathWay.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                className="bg-white rounded-2xl p-7 text-center border border-gray-50 hover:shadow-xl hover:shadow-cp-green/[0.04] transition-all duration-500 hover:-translate-y-1 group"
+              >
+                <div className="w-14 h-14 bg-cp-green/[0.05] rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-cp-green/10 transition-colors duration-300">
+                  <item.icon className="w-7 h-7 text-cp-green group-hover:text-cp-gold transition-colors duration-300" />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-cp-green mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ HOW LEARNING HAPPENS ════════════════ */}
+      <section className="py-20 sm:py-28 section-gradient-blue relative overflow-hidden">
+        <div className="absolute inset-0 pattern-dots opacity-15 pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+              How Learning Happens
+            </span>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white mb-4">
+              The ClearPath Learning Cycle
+            </h2>
+            <p className="text-white/80 max-w-2xl mx-auto">
+              Every learner follows one intentional cycle—personalised to their
+              needs and designed to ensure real growth.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6"
+          >
+            {learningCycle.map((item, i) => (
+              <motion.div key={item.step} variants={fadeUp} className="text-center">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-white/[0.08] backdrop-blur-sm border border-white/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-7 h-7 text-cp-gold" />
+                  </div>
+                  {i < learningCycle.length - 1 && (
+                    <div className="hidden lg:flex absolute top-1/2 -right-6 -translate-y-1/2 items-center">
+                      <ArrowRight className="w-4 h-4 text-cp-gold/40" />
+                    </div>
+                  )}
+                </div>
+                <div className="inline-flex items-center justify-center w-7 h-7 bg-cp-gold text-cp-green text-xs font-bold rounded-full mb-2">
+                  {i + 1}
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-white mb-2">
+                  {item.step}
+                </h3>
+                <p className="text-white/75 text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ PARENT PARTNERSHIP ════════════════ */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -25 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+                Parent Partnership
+              </span>
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-5">
+                Parents Are Partners, Not Spectators
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Parents receive meaningful progress updates, competency reports,
+                intervention plans where needed, and regular opportunities to
+                partner with teachers. Education is a shared journey between home
+                and school—and we make sure you are never left guessing about how
+                your child is learning.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  asChild
+                  className="bg-cp-green hover:bg-cp-green-light text-white font-semibold rounded-full px-7 group"
+                >
+                  <Link href="/contact">
+                    Partner With Us
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-cp-blue/25 text-cp-blue hover:bg-cp-blue hover:text-white rounded-full px-7"
+                >
+                  <Link href="/news">Latest Updates</Link>
+                </Button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+            >
+              {partnership.map((item) => (
+                <motion.div
+                  key={item.title}
+                  variants={fadeUp}
+                  className="bg-cp-cream rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:shadow-cp-blue/10 transition-all duration-400 hover:-translate-y-0.5"
+                >
+                  <div className="w-10 h-10 bg-cp-blue-lighter rounded-xl flex items-center justify-center mb-4">
+                    <item.icon className="w-5 h-5 text-cp-blue" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-playfair)] font-bold text-cp-green mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════ THE CLEARPATH GRADUATE ════════════════ */}
+      <section className="py-20 sm:py-28 bg-cp-cream">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+              The ClearPath Graduate
+            </span>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
+              Grown in Consciousness, Character, and Competence
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our students grow in three interconnected dimensions—so they leave
+              ClearPath ready for higher education, leadership, and life.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {graduateValues.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                className="bg-white rounded-3xl p-8 text-center shadow-sm border border-gray-50 hover:shadow-xl hover:shadow-cp-green/[0.04] transition-all duration-500 hover:-translate-y-1 group"
+              >
+                <div className="w-16 h-16 bg-cp-green/[0.05] rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-cp-green/10 transition-colors duration-300">
+                  <item.icon className="w-8 h-8 text-cp-green group-hover:text-cp-gold transition-colors duration-300" />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-cp-green mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ════════════════ PROGRAMMES ════════════════ */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -284,12 +690,15 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
+            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+              Programmes
+            </span>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              Two Arms. One Institution.
+              One Institution. Pathways for Every Learner.
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               The School organizes learning. The Hub transforms learning. Both
-              work together as one integrated system.
+              work together as one integrated system where every child learns.
             </p>
           </motion.div>
 
@@ -313,9 +722,10 @@ export default function HomePage() {
                     The School
                   </h3>
                   <p className="text-white/80 leading-relaxed mb-2">
-                    Elementary through Advanced School—structured, faith-centered education
-                    with Cambridge & National Curriculum, Islamic values, and
-                    leadership development from EYFS to post-secondary.
+                    Elementary through Advanced School—structured, faith-centred
+                    education where every lesson leads to learning. Cambridge &
+                    National Curriculum, Islamic values, and personalised support
+                    from EYFS to post-secondary.
                   </p>
                 </div>
                 <Button
@@ -338,20 +748,20 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
               className="group relative overflow-hidden rounded-3xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-cp-gold via-cp-gold to-[#9a7d25]" />
+              <div className="absolute inset-0 hero-gradient-blue" />
               <div className="absolute inset-0 pattern-dots opacity-15" />
               <div className="relative p-8 sm:p-10 min-h-[320px] flex flex-col justify-between">
                 <div>
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-5">
-                    <Users className="w-6 h-6 text-white" />
+                    <Monitor className="w-6 h-6 text-cp-gold" />
                   </div>
                   <h3 className="font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-bold text-white mb-3">
                     The Hub
                   </h3>
                   <p className="text-white/85 leading-relaxed mb-2">
                     LMS platform, training programs, radio, educational products,
-                    and membership access—extending the ClearPath experience far
-                    beyond our walls.
+                    and membership access—extending the ClearPath learning
+                    experience far beyond our walls.
                   </p>
                 </div>
                 <Button
@@ -369,138 +779,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════ THE 3Cs ════════════════ */}
-      <section className="py-20 sm:py-28 bg-cp-cream">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
-              Our DNA
-            </span>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              The 3Cs That Guide Us
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {[
-              {
-                icon: Eye,
-                title: "Consciousness",
-                desc: "Awareness of self, purpose, and responsibility to Allah and society. We cultivate minds that understand their role in the world and their duty to serve with intention and clarity.",
-              },
-              {
-                icon: Target,
-                title: "Competence",
-                desc: "Mastery of knowledge and skills that create real value. We equip our students and community with the tools, training, and expertise needed to excel in an ever-evolving world.",
-              },
-              {
-                icon: Heart,
-                title: "Character",
-                desc: "Integrity, adab, and moral excellence in all dealings. True success begins with character—grounded in Islamic values, expressed through dignity, respect, and responsibility.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                className="bg-white rounded-3xl p-8 text-center shadow-sm border border-gray-50 hover:shadow-xl hover:shadow-cp-green/[0.04] transition-all duration-500 hover:-translate-y-1 group"
-              >
-                <div className="w-16 h-16 bg-cp-green/[0.05] rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-cp-green/10 transition-colors duration-300">
-                  <item.icon className="w-8 h-8 text-cp-green group-hover:text-cp-gold transition-colors duration-300" />
-                </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-cp-green mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ════════════════ TESTIMONIALS ════════════════ */}
-      <section className="py-20 sm:py-28 section-gradient-green relative overflow-hidden">
+      {/* ════════════════ FINAL CTA ════════════════ */}
+      <section className="py-20 sm:py-24 hero-gradient-blue relative overflow-hidden">
         <div className="absolute inset-0 pattern-dots opacity-15 pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <span className="inline-block text-cp-gold font-semibold text-sm tracking-[0.2em] uppercase mb-3">
-              Testimonials
-            </span>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white">
-              What Our Community Says
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            {testimonials.map((t) => (
-              <motion.div
-                key={t.name}
-                variants={fadeUp}
-                className="bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl p-7"
-              >
-                <Quote className="w-8 h-8 text-cp-gold/30 mb-4" />
-                <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-                <div>
-                  <p className="text-white font-semibold text-sm">{t.name}</p>
-                  <p className="text-cp-gold text-xs mt-0.5">{t.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ════════════════ CTA ════════════════ */}
-      <section className="py-20 sm:py-24 bg-cp-cream">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-cp-green mb-4">
-              Ready to Join the ClearPath Family?
+            <Award className="w-12 h-12 text-cp-gold mx-auto mb-6" />
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white mb-4">
+              Give Your Child a School Where Learning Comes First
             </h2>
-            <p className="text-muted-foreground mb-8 text-base sm:text-lg">
-              Admissions for the 2026/2027 Academic Session are now open.
-              Entrance assessments begin May 9th. Take the first step today.
+            <p className="text-white/80 mb-8 text-base sm:text-lg">
+              Admissions for the 2026/2027 Academic Session are now open. Every
+              child can learn—and at ClearPath, every child will.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-cp-green hover:bg-cp-green-light text-white font-semibold rounded-full px-8 group"
+                className="bg-white text-cp-green hover:bg-white/90 font-semibold rounded-full px-8 group"
               >
-                <Link href="/school#admissions">
-                  Apply for Admission
+                <Link href="/admissions">
+                  Apply Now
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -508,9 +812,9 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-cp-green/20 text-cp-green hover:bg-cp-green hover:text-white rounded-full px-8"
+                className="border-white/25 text-white hover:bg-white/10 rounded-full px-8"
               >
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact">Book a School Tour</Link>
               </Button>
             </div>
           </motion.div>

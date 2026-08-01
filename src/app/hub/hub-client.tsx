@@ -137,7 +137,7 @@ const hubPrograms = [
     iconBg: "bg-teal-50",
     iconColor: "text-teal-700",
     description:
-      "Learning resources, digital tools, and publications designed to support students, teachers, and the broader educational community. Every product we create carries the ClearPath standard—thoughtfully designed, practically useful, and aligned with our mission of Consciousness, Competence, and Character.",
+      "Learning resources, digital tools, and publications designed to support students, teachers, and the broader educational community. Every product we create carries the ClearPath standard—thoughtfully designed, practically useful, and aligned with our mission of Consciousness, Character, and Competence.",
     features: [
       "Curriculum-aligned study materials",
       "Digital learning tools and apps",
@@ -155,10 +155,11 @@ export default function HubPage() {
   return (
     <>
       <PageHero
+        promise="Where Learning Comes First"
         badge="The Hub"
-        title="Transforming Learning"
+        title="Learning, Extended"
         titleAccent="Beyond the Classroom"
-        subtitle="The Hub transforms learning. Through our platform, programs, media, and products, we extend the ClearPath experience far beyond our walls—impacting communities and shaping futures at scale."
+        subtitle="The Hub carries ClearPath's learning-first mission further—through our platform, programs, media, and products, we extend the ClearPath experience far beyond our walls, making learning support accessible to every family and community we serve."
       />
 
       {/* ─── Key Message ─── */}

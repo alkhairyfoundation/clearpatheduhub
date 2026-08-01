@@ -132,7 +132,7 @@ const hubPrograms = [
     iconBg: "bg-teal-50",
     iconColor: "text-teal-700",
     description:
-      "Learning resources, digital tools, and publications designed to support students, teachers, and the broader educational community. Every product we create carries the ClearPath standard—thoughtfully designed, practically useful, and aligned with our mission of Consciousness, Competence, and Character.",
+      "Learning resources, digital tools, and publications designed to support students, teachers, and the broader educational community. Every product we create carries the ClearPath standard—thoughtfully designed, practically useful, and aligned with our mission of Consciousness, Character, and Competence.",
     features: [
       "Curriculum-aligned study materials",
       "Digital learning tools and apps",

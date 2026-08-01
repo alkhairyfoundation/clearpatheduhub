@@ -9,6 +9,7 @@ const quickLinks = [
   { label: "The School", href: "/school" },
   { label: "The Hub", href: "/hub" },
   { label: "About Us", href: "/about" },
+  { label: "News", href: "/news" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -47,8 +48,9 @@ export default function SiteFooter() {
             </div>
             <p className="text-cp-gold/80 text-sm mb-3">مدرسة المحجة البيضاء</p>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              We&apos;re raising a generation of Muslims who are ready to thrive in
-              an ever-changing world. Consciousness • Competence • Character
+              We know every learner. We monitor every learner. We support every
+              learner. We celebrate every learner&apos;s growth. Where Learning
+              Comes First — Consciousness • Character • Competence.
             </p>
             <div className="flex gap-3">
               <a

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -67,7 +67,7 @@ export default function FutureEducatorsAcademyPage() {
           >
             <Sparkles className="w-4 h-4 text-cp-gold" />
             <span className="text-white/85 text-sm font-medium tracking-wider">
-              Consciousness • Competence • Character
+              Consciousness • Character • Competence
             </span>
           </motion.div>
 

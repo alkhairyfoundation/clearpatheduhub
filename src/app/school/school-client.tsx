@@ -168,10 +168,11 @@ export default function SchoolPage() {
   return (
     <>
       <PageHero
+        promise="Where Learning Comes First"
         badge="The School"
-        title="Nurturing Minds."
-        titleAccent="Guiding Hearts. Shaping Futures."
-        subtitle="From early years through post-secondary education, ClearPath provides a structured, faith-centered environment where every learner thrives. Our school combines academic rigor with Islamic values to develop well-rounded individuals prepared for both this world and the hereafter."
+        title="Learning-Centred Schooling."
+        titleAccent="From Early Years to Post-Secondary."
+        subtitle="Every child learns best when learning comes first. ClearPath provides a structured, faith-centered environment where each learner's progress is known, monitored, and supported—combining academic rigor with Islamic values to develop well-rounded individuals prepared for this world and the hereafter."
       />
 
       {/* ─── About the School ─── */}
@@ -193,8 +194,8 @@ export default function SchoolPage() {
               development. Our learning environment is structured, secure, and
               filled with purpose—designed to support collaboration, creativity,
               and focus. We believe that education is not just about passing
-              exams; it is about raising a generation of conscious, competent, and
-              principled individuals who are prepared to lead and serve.
+              exams; it is about raising a generation of conscious, principled, and
+              competent individuals who are prepared to lead and serve.
             </p>
           </motion.div>
 

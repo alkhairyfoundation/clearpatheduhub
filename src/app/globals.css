@@ -51,6 +51,9 @@
   --color-cp-cream-dark: #ebe3d5;
   --color-cp-charcoal: #1a1a1a;
   --color-cp-white: #ffffff;
+  --color-cp-blue: #155e8a;
+  --color-cp-blue-light: #2c7db0;
+  --color-cp-blue-lighter: #eaf3f9;
 }
 
 :root {
@@ -133,6 +136,12 @@
   }
   .hero-gradient {
     background: linear-gradient(135deg, #063b29 0%, #0a5c40 40%, #063b29 70%, #042a1d 100%);
+  }
+  .hero-gradient-blue {
+    background: linear-gradient(135deg, #063b29 0%, #0a5c40 30%, #155e8a 75%, #0f4a6d 100%);
+  }
+  .section-gradient-blue {
+    background: linear-gradient(135deg, #155e8a 0%, #2c7db0 60%, #155e8a 100%);
   }
   .section-gradient-green {
     background: linear-gradient(135deg, #063b29 0%, #0a5c40 60%, #063b29 100%);
