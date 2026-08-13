@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Facebook, Instagram, ArrowUp, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -30,6 +31,9 @@ const hubLinks = [
 ];
 
 export default function SiteFooter() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/lms")) return null;
+
   return (
     <footer className="bg-cp-green text-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">

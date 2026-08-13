@@ -43,6 +43,7 @@ const navLinks = [
         { label: "Career Labs", href: "/hub/programs/career-labs" },
       ]},
       { label: "Bootcamp", href: "/bootcamp" },
+      { label: "Learning Zone Login", href: "/lms" },
     ],
   },
   { label: "About Us", href: "/about" },
@@ -65,6 +66,9 @@ export default function SiteNavigation() {
   // Close mobile menu and dropdown on navigation via click handlers
 
   const isHome = pathname === "/";
+  const isLms = pathname.startsWith("/lms");
+
+  if (isLms) return null;
 
   return (
     <motion.header
